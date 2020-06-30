@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "efe2c459-f9b9-4b9c-ae82-375aeed604ad",
+		"name": "BC - redthree.com - CRONUS US With Variables",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ODATA - Accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}{{bc_company}}Chart_of_Accounts",
+					"host": [
+						"{{base_url}}{{bc_company}}Chart_of_Accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ODATA - Accounts with Filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}{{bc_company}}Chart_of_Accounts",
+					"host": [
+						"{{base_url}}{{bc_company}}Chart_of_Accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ODATA - G/L Entries with Filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}{{bc_company}}G_LEntries?$filter=Entry_No le 10",
+					"host": [
+						"{{base_url}}{{bc_company}}G_LEntries"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Entry_No le 10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ODATA - G/L Entries with Filter and",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}{{bc_company}}G_LEntries?$filter=Entry_No le 10",
+					"host": [
+						"{{base_url}}{{bc_company}}G_LEntries"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Entry_No le 10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ODATA - G/L Entries with Filter - Select",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}{{bc_company}}G_LEntries?$filter=Entry_No le 10&$select=Entry_No,G_L_Account_No,Posting_Date,Amount",
+					"host": [
+						"{{base_url}}{{bc_company}}G_LEntries"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Entry_No le 10"
+						},
+						{
+							"key": "$select",
+							"value": "Entry_No,G_L_Account_No,Posting_Date,Amount"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ODATA - G/L Entries with Filter By Date - Select",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}{{bc_company}}G_LEntries?$filter=Entry_No le 10&$select=Entry_No,G_L_Account_No,Posting_Date,Amount",
+					"host": [
+						"{{base_url}}{{bc_company}}G_LEntries"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Entry_No le 10"
+						},
+						{
+							"key": "$select",
+							"value": "Entry_No,G_L_Account_No,Posting_Date,Amount"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ODATA - Sales Prices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}{{bc_company}}SalesPrices",
+					"host": [
+						"{{base_url}}{{bc_company}}SalesPrices"
+					]
+				},
+				"description": "Salesprices"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "cf3fbd66-00bf-4dbd-bf46-e75e0b451b46",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2568936b-0c7e-412b-81e9-4f7a92ee1e13",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "adec678f-04b9-422c-beef-192b9e313a04",
+			"key": "base_url",
+			"value": "https://api.businesscentral.dynamics.com/v2.0/Yourdomainhere/Production/ODataV4/"
+		},
+		{
+			"id": "a57b0388-44ae-43cf-a5be-b4de0b6f62a3",
+			"key": "bc_company",
+			"value": "Company('CRONUS%20USA%2C%20Inc.')/"
+		},
+		{
+			"id": "7ba59562-987b-46d5-8a3c-efa55031b12d",
+			"key": "bc_company_spaces",
+			"value": "Company('CRONUS USA, \nInc.')/"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
